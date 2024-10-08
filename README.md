@@ -20,6 +20,7 @@
 3. Cài đặt trình điều khiển cho trình duyệt (ví dụ: ChromeDriver cho Google Chrome) và đảm bảo nó nằm trong PATH của hệ thống.
 
 ## Cấu trúc thư mục
+```
 ├── lesson1/
 │ └── keywords_and_testcases.robot
 ├── lesson2/
@@ -43,12 +44,13 @@
 │ └── api_testing.robot
 └── lesson10/
 └── database_testing.robot
-
+```
 ## Chạy các test case
 
 Để chạy một file test cụ thể, sử dụng lệnh:
-robot path/to/test_file.robot
-Ví dụ: robot lesson1/keywords_and_testcases.robot
+```robot path/to/test_file.robot```
+Ví dụ: 
+```robot lesson1/keywords_and_testcases.robot```
 
 ## Nội dung các bài học
 
