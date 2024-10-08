@@ -1,0 +1,4 @@
+username,password,expected
+user,pass,success
+invalid_user,invalid_pass,failure
+user,wrong_pass,failure

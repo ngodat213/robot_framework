@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-08T15:08:10.154513" rpa="false" schemaversion="5">
+<suite id="s1" name="Variables" source="D:\workspace\robot_fw\lesson2\variables.robot">
+<test id="s1-t1" name="Ví dụ Sử Dụng Biến Vô Hướng" line="19">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.188768" level="INFO">Đăng nhập với tài khoản: testuser@example.com</msg>
+<arg>Đăng nhập với tài khoản: ${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.188768" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.189769" level="INFO">Tại URL: https://example.com</msg>
+<arg>Tại URL: ${URL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.188768" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.189769" level="INFO">${login_message} = Đăng nhập thành công với mật khẩu: password123</msg>
+<var>${login_message}</var>
+<arg>Đăng nhập thành công với mật khẩu: ${PASSWORD}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.189769" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.189769" level="INFO">Đăng nhập thành công với mật khẩu: password123</msg>
+<arg>${login_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.189769" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng biến vô hướng</doc>
+<status status="PASS" start="2024-10-08T15:08:10.187768" elapsed="0.002001"/>
+</test>
+<test id="s1-t2" name="Ví dụ Sử Dụng Biến Danh Sách" line="26">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.191769" level="INFO">Danh sách các loại trái cây:</msg>
+<arg>Danh sách các loại trái cây:</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.190769" elapsed="0.001000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.191769" level="INFO">- apple</msg>
+<arg>- ${fruit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.000000"/>
+</kw>
+<var name="${fruit}">apple</var>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.191769" level="INFO">- banana</msg>
+<arg>- ${fruit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.000000"/>
+</kw>
+<var name="${fruit}">banana</var>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.191769" level="INFO">- orange</msg>
+<arg>- ${fruit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.001000"/>
+</kw>
+<var name="${fruit}">orange</var>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.001000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.192769" level="INFO">- grape</msg>
+<arg>- ${fruit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.192769" elapsed="0.000000"/>
+</kw>
+<var name="${fruit}">grape</var>
+<status status="PASS" start="2024-10-08T15:08:10.192769" elapsed="0.000000"/>
+</iter>
+<var>${fruit}</var>
+<value>@{FRUITS}</value>
+<status status="PASS" start="2024-10-08T15:08:10.191769" elapsed="0.001000"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.192769" level="INFO">Trái cây đầu tiên là: apple</msg>
+<arg>Trái cây đầu tiên là: ${FRUITS}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.192769" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.192769" level="INFO">Trái cây cuối cùng là: grape</msg>
+<arg>Trái cây cuối cùng là: ${FRUITS}[-1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.192769" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng biến danh sách</doc>
+<status status="PASS" start="2024-10-08T15:08:10.190769" elapsed="0.002888"/>
+</test>
+<test id="s1-t3" name="Ví dụ Sử Dụng Biến Từ Điển" line="35">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.194264" level="INFO">Thông tin người dùng:</msg>
+<arg>Thông tin người dùng:</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.194264" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.195162" level="INFO">Tên: John Doe</msg>
+<arg>Tên: ${USER_INFO}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.194264" elapsed="0.000898"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.195162" level="INFO">Tuổi: 30</msg>
+<arg>Tuổi: ${USER_INFO}[age]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.195162" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.195162" level="INFO">Email: john@example.com</msg>
+<arg>Email: ${USER_INFO}[email]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.195162" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng biến từ điển</doc>
+<status status="PASS" start="2024-10-08T15:08:10.193657" elapsed="0.001505"/>
+</test>
+<test id="s1-t4" name="Sử Dụng Biến Trong Test Case" line="42">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.197162" level="INFO">${current_url} = https://example.com</msg>
+<var>${current_url}</var>
+<arg>${URL}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.196163" elapsed="0.000999"/>
+</kw>
+<kw name="Login To Website">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.197162" level="INFO">Đang truy cập https://example.com</msg>
+<arg>Đang truy cập ${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.197162" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.197162" level="INFO">Đăng nhập với tài khoản testuser@example.com</msg>
+<arg>Đăng nhập với tài khoản ${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.197162" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.198162" level="INFO">Sử dụng mật khẩu password123</msg>
+<arg>Sử dụng mật khẩu ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.197162" elapsed="0.001000"/>
+</kw>
+<return>
+<value>success</value>
+<status status="PASS" start="2024-10-08T15:08:10.198162" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-08T15:08:10.198162" level="INFO">${login_status} = success</msg>
+<var>${login_status}</var>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<arg>${current_url}</arg>
+<doc>Mô phỏng đăng nhập vào website</doc>
+<status status="PASS" start="2024-10-08T15:08:10.197162" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${login_status}</arg>
+<arg>success</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.198162" elapsed="0.000000"/>
+</kw>
+<doc>Bài tập: Sử dụng biến để lưu trữ thông tin đăng nhập</doc>
+<status status="PASS" start="2024-10-08T15:08:10.196163" elapsed="0.001999"/>
+</test>
+<test id="s1-t5" name="Sử Dụng Danh Sách Trong Test Case" line="48">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.199162" level="INFO">@{colors} = [ red | blue | green | yellow ]</msg>
+<var>@{colors}</var>
+<arg>red</arg>
+<arg>blue</arg>
+<arg>green</arg>
+<arg>yellow</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.199162" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.200163" level="INFO">Màu hiện tại: red</msg>
+<arg>Màu hiện tại: ${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.199162" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${color}' == 'blue'</arg>
+<arg>Log</arg>
+<arg>Đã tìm thấy màu xanh!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.200163" elapsed="0.000000"/>
+</kw>
+<var name="${color}">red</var>
+<status status="PASS" start="2024-10-08T15:08:10.199162" elapsed="0.001001"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.200163" level="INFO">Màu hiện tại: blue</msg>
+<arg>Màu hiện tại: ${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.200163" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.200163" level="INFO">Đã tìm thấy màu xanh!</msg>
+<arg>Đã tìm thấy màu xanh!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.200163" elapsed="0.001000"/>
+</kw>
+<arg>'${color}' == 'blue'</arg>
+<arg>Log</arg>
+<arg>Đã tìm thấy màu xanh!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.200163" elapsed="0.001000"/>
+</kw>
+<var name="${color}">blue</var>
+<status status="PASS" start="2024-10-08T15:08:10.200163" elapsed="0.001000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.201163" level="INFO">Màu hiện tại: green</msg>
+<arg>Màu hiện tại: ${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${color}' == 'blue'</arg>
+<arg>Log</arg>
+<arg>Đã tìm thấy màu xanh!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</kw>
+<var name="${color}">green</var>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T15:08:10.201163" level="INFO">Màu hiện tại: yellow</msg>
+<arg>Màu hiện tại: ${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${color}' == 'blue'</arg>
+<arg>Log</arg>
+<arg>Đã tìm thấy màu xanh!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</kw>
+<var name="${color}">yellow</var>
+<status status="PASS" start="2024-10-08T15:08:10.201163" elapsed="0.000000"/>
+</iter>
+<var>${color}</var>
+<value>@{colors}</value>
+<status status="PASS" start="2024-10-08T15:08:10.199162" elapsed="0.002001"/>
+</for>
+<doc>Bài tập: Sử dụng danh sách để lặp qua các giá trị</doc>
+<status status="PASS" start="2024-10-08T15:08:10.199162" elapsed="0.002001"/>
+</test>
+<doc>Lesson 2: Variables trong Robot Framework
+Mục tiêu: Làm quen với biến (variables) và cách sử dụng trong test case.</doc>
+<status status="PASS" start="2024-10-08T15:08:10.156514" elapsed="0.045649"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Variables">Variables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

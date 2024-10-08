@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Đơn Giản</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        form { margin-bottom: 20px; }
+        input, button { margin: 5px 0; padding: 5px; }
+        #searchResults { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Trang Web Đơn Giản</h1>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Tên đăng nhập" required><br>
+        <input type="password" id="password" placeholder="Mật khẩu" required><br>
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <div id="welcomeMessage" style="display: none;">
+        <h2>Chào mừng, <span id="userGreeting"></span>!</h2>
+    </div>
+    <form id="searchForm" style="display: none;">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+    <div id="searchResults"></div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === 'user' && password === 'pass') {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('welcomeMessage').style.display = 'block';
+                document.getElementById('userGreeting').textContent = username;
+                document.getElementById('searchForm').style.display = 'block';
+            } else {
+                alert('Đăng nhập thất bại. Vui lòng thử lại.');
+            }
+        });
+
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var searchTerm = document.getElementById('searchInput').value;
+            var results = 'Kết quả tìm kiếm cho "' + searchTerm + '": Sản phẩm A, Sản phẩm B';
+            document.getElementById('searchResults').textContent = results;
+        });
+    </script>
+</body>
+</html>
