@@ -13,9 +13,11 @@
    ```pip install robotframework```
 
 2. Cài đặt các thư viện cần thiết:
-   ```pip install robotframework-seleniumlibrary```
-   ```pip install robotframework-requests```
-   ```pip install robotframework-databaselibrary```
+   ```
+   pip install robotframework-seleniumlibrary
+   pip install robotframework-requests
+   pip install robotframework-databaselibrary
+   ```
 
 3. Cài đặt trình điều khiển cho trình duyệt (ví dụ: ChromeDriver cho Google Chrome) và đảm bảo nó nằm trong PATH của hệ thống.
 
