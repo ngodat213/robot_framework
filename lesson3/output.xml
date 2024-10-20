@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-09T08:10:33.392991" rpa="false" schemaversion="5">
+<suite id="s1" name="Library And Resource" source="D:\workspace\robot_fw\lesson3\library_and_resource.robot">
+<test id="s1-t1" name="Ví dụ Sử Dụng OperatingSystem Library" line="13">
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.458991" level="INFO" html="true">Created file '&lt;a href="file://D:\workspace\robot_fw\lesson3\test_file.txt"&gt;D:\workspace\robot_fw\lesson3\test_file.txt&lt;/a&gt;'.</msg>
+<arg>${TEST_FILE}</arg>
+<arg>${FILE_CONTENT}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.457992" elapsed="0.001998"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.459990" level="INFO" html="true">Getting file '&lt;a href="file://D:\workspace\robot_fw\lesson3\test_file.txt"&gt;D:\workspace\robot_fw\lesson3\test_file.txt&lt;/a&gt;'.</msg>
+<msg time="2024-10-09T08:10:33.463006" level="INFO">${content} = Đây là nội dung của file test.</msg>
+<var>${content}</var>
+<arg>${TEST_FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.459990" elapsed="0.003016"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${content}</arg>
+<arg>${FILE_CONTENT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.463006" elapsed="0.000000"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.464007" level="INFO" html="true">Removed file '&lt;a href="file://D:\workspace\robot_fw\lesson3\test_file.txt"&gt;D:\workspace\robot_fw\lesson3\test_file.txt&lt;/a&gt;'.</msg>
+<arg>${TEST_FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.464007" elapsed="0.000983"/>
+</kw>
+<kw name="File Should Not Exist" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.464990" level="INFO" html="true">File '&lt;a href="file://D:\workspace\robot_fw\lesson3\test_file.txt"&gt;D:\workspace\robot_fw\lesson3\test_file.txt&lt;/a&gt;' does not exist.</msg>
+<arg>${TEST_FILE}</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.464990" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng OperatingSystem Library</doc>
+<status status="PASS" start="2024-10-09T08:10:33.455991" elapsed="0.010002"/>
+</test>
+<test id="s1-t2" name="Ví dụ Sử Dụng BuiltIn Library" line="21">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.480995" level="INFO">${result} = 4</msg>
+<var>${result}</var>
+<arg>2 + 2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.478994" elapsed="0.002001"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.482995" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>4</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.481994" elapsed="0.002001"/>
+</kw>
+<kw name="Convert To Upper Case">
+<msg time="2024-10-09T08:10:33.485994" level="FAIL">No keyword with name 'Convert To Upper Case' found.</msg>
+<var>${uppercase}</var>
+<arg>hello world</arg>
+<status status="FAIL" start="2024-10-09T08:10:33.485994" elapsed="0.002002">No keyword with name 'Convert To Upper Case' found.</status>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${uppercase}</arg>
+<arg>HELLO WORLD</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-10-09T08:10:33.488996" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng BuiltIn Library</doc>
+<status status="FAIL" start="2024-10-09T08:10:33.467991" elapsed="0.022005">No keyword with name 'Convert To Upper Case' found.</status>
+</test>
+<test id="s1-t3" name="Bài Tập: Sử Dụng OperatingSystem Library" line="28">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.494997" level="INFO">${file_name} = my_test_file.txt</msg>
+<var>${file_name}</var>
+<arg>my_test_file.txt</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.493997" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.495997" level="INFO">${file_content} = Đây là nội dung của file bài tập.</msg>
+<var>${file_content}</var>
+<arg>Đây là nội dung của file bài tập.</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.495997" elapsed="0.001002"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.498002" level="INFO" html="true">Created file '&lt;a href="file://D:\workspace\robot_fw\lesson3\my_test_file.txt"&gt;D:\workspace\robot_fw\lesson3\my_test_file.txt&lt;/a&gt;'.</msg>
+<arg>${file_name}</arg>
+<arg>${file_content}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.496999" elapsed="0.001999"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.498998" level="INFO" html="true">Getting file '&lt;a href="file://D:\workspace\robot_fw\lesson3\my_test_file.txt"&gt;D:\workspace\robot_fw\lesson3\my_test_file.txt&lt;/a&gt;'.</msg>
+<msg time="2024-10-09T08:10:33.501999" level="INFO">${read_content} = Đây là nội dung của file bài tập.</msg>
+<var>${read_content}</var>
+<arg>${file_name}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.498998" elapsed="0.003001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${read_content}</arg>
+<arg>${file_content}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.501999" elapsed="0.001002"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.504000" level="INFO" html="true">Removed file '&lt;a href="file://D:\workspace\robot_fw\lesson3\my_test_file.txt"&gt;D:\workspace\robot_fw\lesson3\my_test_file.txt&lt;/a&gt;'.</msg>
+<arg>${file_name}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.503001" elapsed="0.000999"/>
+</kw>
+<kw name="File Should Not Exist" owner="OperatingSystem">
+<msg time="2024-10-09T08:10:33.504999" level="INFO" html="true">File '&lt;a href="file://D:\workspace\robot_fw\lesson3\my_test_file.txt"&gt;D:\workspace\robot_fw\lesson3\my_test_file.txt&lt;/a&gt;' does not exist.</msg>
+<arg>${file_name}</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.504999" elapsed="0.000000"/>
+</kw>
+<doc>Bài tập: Tạo, ghi và xóa một tệp</doc>
+<status status="PASS" start="2024-10-09T08:10:33.491996" elapsed="0.014003"/>
+</test>
+<test id="s1-t4" name="Sử Dụng Resource File" line="38">
+<kw name="Tính Tổng" owner="resource_file">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.512001" level="INFO">${tổng} = 8</msg>
+<var>${tổng}</var>
+<arg>${số_1} + ${số_2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.511000" elapsed="0.001001"/>
+</kw>
+<return>
+<value>${tổng}</value>
+<status status="PASS" start="2024-10-09T08:10:33.512001" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-09T08:10:33.512001" level="INFO">${result} = 8</msg>
+<var>${result}</var>
+<arg>5</arg>
+<arg>3</arg>
+<doc>Tính tổng hai số</doc>
+<status status="PASS" start="2024-10-09T08:10:33.511000" elapsed="0.001001"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.513001" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>8</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.513001" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.514002" level="INFO">Xin chào từ resource file!</msg>
+<arg>${GREETING}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.514002" elapsed="0.000000"/>
+</kw>
+<kw name="Chào Hỏi" owner="resource_file">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T08:10:33.515018" level="INFO">Xin chào, Robot Framework!</msg>
+<arg>Xin chào, ${tên}!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T08:10:33.515018" elapsed="0.000000"/>
+</kw>
+<arg>Robot Framework</arg>
+<doc>In ra lời chào</doc>
+<status status="PASS" start="2024-10-09T08:10:33.515018" elapsed="0.000985"/>
+</kw>
+<doc>Minh họa cách sử dụng resource file</doc>
+<status status="PASS" start="2024-10-09T08:10:33.509000" elapsed="0.007003"/>
+</test>
+<doc>Lesson 3: Library và Resource
+Mục tiêu: Tìm hiểu cách sử dụng thư viện và tài nguyên bên ngoài.</doc>
+<status status="FAIL" start="2024-10-09T08:10:33.395975" elapsed="0.122029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Library And Resource">Library And Resource</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-09T08:10:33.451988" level="WARN">Error in file 'D:\workspace\robot_fw\lesson3\resource_file.robot' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

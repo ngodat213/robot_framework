@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-09T00:39:03.876827" rpa="false" schemaversion="5">
+<suite id="s1" name="Advanced Custom Libraries" source="D:\workspace\robot_fw\lesson8\advanced_custom_libraries.robot">
+<test id="s1-t1" name="Ví dụ Sử Dụng Thư Viện Tùy Chỉnh - Tính Diện Tích Hình Tròn" line="15">
+<kw name="Calculate Circle Area" owner="CustomMathLibrary">
+<msg time="2024-10-09T00:39:03.902184" level="INFO">${area} = 78.53981633974483</msg>
+<var>${area}</var>
+<arg>${RADIUS}</arg>
+<doc>Tính diện tích hình tròn.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.902184" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-09T00:39:03.903185" level="INFO">${expected_area} = 78.53981633974483</msg>
+<var>${expected_area}</var>
+<arg>math.pi * ${RADIUS}**2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.903185" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${area}</arg>
+<arg>${expected_area}</arg>
+<arg>precision=4</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.903185" elapsed="0.000000"/>
+</kw>
+<doc>Minh họa cách sử dụng thư viện tùy chỉnh để tính diện tích hình tròn</doc>
+<status status="PASS" start="2024-10-09T00:39:03.901185" elapsed="0.002000"/>
+</test>
+<test id="s1-t2" name="Ví dụ Sử Dụng Thư Viện Tùy Chỉnh - Tính Diện Tích Tam Giác" line="21">
+<kw name="Calculate Triangle Area" owner="CustomMathLibrary">
+<msg time="2024-10-09T00:39:03.905185" level="INFO">${area} = 12.0</msg>
+<var>${area}</var>
+<arg>${BASE}</arg>
+<arg>${HEIGHT}</arg>
+<doc>Tính diện tích tam giác.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.905185" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-09T00:39:03.905185" level="INFO">${expected_area} = 12.0</msg>
+<var>${expected_area}</var>
+<arg>0.5 * ${BASE} * ${HEIGHT}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.905185" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${area}</arg>
+<arg>${expected_area}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.905185" elapsed="0.001000"/>
+</kw>
+<doc>Minh họa cách sử dụng thư viện tùy chỉnh để tính diện tích tam giác</doc>
+<status status="PASS" start="2024-10-09T00:39:03.904185" elapsed="0.002000"/>
+</test>
+<test id="s1-t3" name="Bài Tập: Sử Dụng Thư Viện Tùy Chỉnh - Tính Số Fibonacci" line="27">
+<kw name="Calculate Fibonacci" owner="CustomMathLibrary">
+<msg time="2024-10-09T00:39:03.907185" level="INFO">${fibonacci} = 55</msg>
+<var>${fibonacci}</var>
+<arg>${FIBONACCI_N}</arg>
+<doc>Tính số Fibonacci thứ n.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.907185" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-09T00:39:03.907185" level="INFO">${expected_fibonacci} = 55</msg>
+<var>${expected_fibonacci}</var>
+<arg>${55}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.907185" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${fibonacci}</arg>
+<arg>${expected_fibonacci}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.907185" elapsed="0.001001"/>
+</kw>
+<doc>Bài tập: Sử dụng thư viện tùy chỉnh để tính số Fibonacci</doc>
+<status status="PASS" start="2024-10-09T00:39:03.906185" elapsed="0.002001"/>
+</test>
+<test id="s1-t4" name="Bài Tập: Sử Dụng Thư Viện Tùy Chỉnh - Kiểm Tra Số Nguyên Tố" line="33">
+<kw name="Is Prime" owner="CustomMathLibrary">
+<msg time="2024-10-09T00:39:03.909186" level="INFO">${is_prime_result} = True</msg>
+<var>${is_prime_result}</var>
+<arg>${PRIME_NUMBER}</arg>
+<doc>Kiểm tra số nguyên tố.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.909186" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_prime_result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.909186" elapsed="0.000000"/>
+</kw>
+<kw name="Is Prime" owner="CustomMathLibrary">
+<msg time="2024-10-09T00:39:03.909186" level="INFO">${is_not_prime_result} = False</msg>
+<var>${is_not_prime_result}</var>
+<arg>${NON_PRIME_NUMBER}</arg>
+<doc>Kiểm tra số nguyên tố.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.909186" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be True" owner="BuiltIn">
+<arg>${is_not_prime_result}</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.910186" elapsed="0.000000"/>
+</kw>
+<doc>Bài tập: Sử dụng thư viện tùy chỉnh để kiểm tra số nguyên tố</doc>
+<status status="PASS" start="2024-10-09T00:39:03.908186" elapsed="0.002000"/>
+</test>
+<doc>Lesson 8: Viết thư viện Python tùy chỉnh (Advanced Custom Libraries)
+Mục tiêu: Viết thư viện Python tùy chỉnh và tích hợp với Robot Framework.</doc>
+<status status="PASS" start="2024-10-09T00:39:03.877827" elapsed="0.033360"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Advanced Custom Libraries">Advanced Custom Libraries</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

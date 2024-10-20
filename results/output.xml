@@ -1,173 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-08T14:25:20.404746" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-17T22:40:33.236807" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Fw" source="D:\workspace\robot_fw">
-<suite id="s1-s1" name="Lesson1" source="D:\workspace\robot_fw\lesson1">
-<suite id="s1-s1-s1" name="Keywords And Testcases" source="D:\workspace\robot_fw\lesson1\keywords_and_testcases.robot">
-<test id="s1-s1-s1-t1" name="Ví dụ Sử Dụng Từ Khóa Cơ Bản" line="12">
-<kw name="Log" owner="BuiltIn" type="SETUP">
-<msg time="2024-10-08T14:25:20.438755" level="INFO">Chuẩn bị chung cho mỗi test case</msg>
-<arg>Chuẩn bị chung cho mỗi test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.438755" elapsed="0.000000"/>
+<suite id="s1-s1" name="Baocao" source="D:\workspace\robot_fw\baocao">
+<suite id="s1-s1-s1" name="Login" source="D:\workspace\robot_fw\baocao\login">
+<suite id="s1-s1-s1-s1" name="Login Testing" source="D:\workspace\robot_fw\baocao\login\login_testing.robot">
+<test id="s1-s1-s1-s1-t1" name="Empty email and password" line="91">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:40:33.450855" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:40:33.449855" elapsed="1.611958"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.439756" level="INFO">Bắt đầu test case sử dụng từ khóa cơ bản</msg>
-<arg>Bắt đầu test case sử dụng từ khóa cơ bản</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.438755" elapsed="0.001001"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.061813" elapsed="0.032008"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.439756" level="INFO">${kết_quả} = 8</msg>
-<var>${kết_quả}</var>
-<arg>${SỐ_1} + ${SỐ_2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.439756" elapsed="0.001000"/>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:40:35.094820" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.094820" elapsed="0.079489"/>
 </kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.440756" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${kết_quả}</arg>
-<arg>${KẾT_QUẢ_MONG_ĐỢI}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.440756" elapsed="0.000000"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:40:35.175303" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:40:35.222980" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.174309" elapsed="0.105683"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.441756" level="INFO">Kết quả lớn hơn 5</msg>
-<arg>Kết quả lớn hơn 5</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.441756" elapsed="0.000000"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:40:35.279992" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.279992" elapsed="0.431179"/>
 </kw>
-<arg>${kết_quả} &gt; 5</arg>
-<arg>Log</arg>
-<arg>Kết quả lớn hơn 5</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.440756" elapsed="0.001000"/>
+<arg>${USERNAME_EMPTY_EMAIL_AND_PASSWORD}</arg>
+<arg>${PASSWORD_EMPTY_EMAIL_AND_PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:40:35.093821" elapsed="0.617350"/>
 </kw>
-<kw name="Log" owner="BuiltIn" type="TEARDOWN">
-<msg time="2024-10-08T14:25:20.442757" level="INFO">Dọn dẹp chung sau mỗi test case</msg>
-<arg>Dọn dẹp chung sau mỗi test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.441756" elapsed="0.001001"/>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:40:35.712171" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.711171" elapsed="0.006001"/>
 </kw>
-<doc>Minh họa cách sử dụng các từ khóa cơ bản</doc>
-<tag>basic</tag>
-<tag>example</tag>
-<status status="PASS" start="2024-10-08T14:25:20.436754" elapsed="0.006003"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:40:35.718172" elapsed="2.162628"/>
+</kw>
+<doc>Empty email and password</doc>
+<status status="PASS" start="2024-10-17T22:40:33.448855" elapsed="4.431945"/>
 </test>
-<test id="s1-s1-s1-t2" name="Ví dụ Cấu Trúc Test Case" line="20">
-<kw name="Log" owner="BuiltIn" type="SETUP">
-<msg time="2024-10-08T14:25:20.443756" level="INFO">Chuẩn bị cho test case</msg>
-<arg>Chuẩn bị cho test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.443756" elapsed="0.001000"/>
-</kw>
-<kw name="Thực Hiện Phép Cộng">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.445756" level="INFO">${kết_quả} = 8</msg>
-<var>${kết_quả}</var>
-<arg>${số_1} + ${số_2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.444756" elapsed="0.001000"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.445756" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${kết_quả}</arg>
-<arg>${kết_quả_mong_đợi}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.445756" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${kết_quả}</value>
-<status status="PASS" start="2024-10-08T14:25:20.445756" elapsed="0.000000"/>
-</return>
-<arg>${SỐ_1}</arg>
-<arg>${SỐ_2}</arg>
-<arg>${KẾT_QUẢ_MONG_ĐỢI}</arg>
-<doc>Từ khóa tùy chỉnh để thực hiện phép cộng và kiểm tra kết quả</doc>
-<status status="PASS" start="2024-10-08T14:25:20.444756" elapsed="0.002001"/>
-</kw>
-<kw name="Log" owner="BuiltIn" type="TEARDOWN">
-<msg time="2024-10-08T14:25:20.446757" level="INFO">Kết thúc test case</msg>
-<arg>Kết thúc test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.446757" elapsed="0.000000"/>
-</kw>
-<doc>Minh họa cấu trúc của một test case</doc>
-<tag>example</tag>
-<tag>structure</tag>
-<status status="PASS" start="2024-10-08T14:25:20.443756" elapsed="0.003001"/>
-</test>
-<test id="s1-s1-s1-t3" name="Bài Tập: Phép Cộng Với Setup và Teardown" line="27">
-<kw name="Log" owner="BuiltIn" type="SETUP">
-<msg time="2024-10-08T14:25:20.448757" level="INFO">Bắt đầu bài tập phép cộng</msg>
-<arg>Bắt đầu bài tập phép cộng</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.448757" elapsed="0.000000"/>
-</kw>
-<kw name="Cộng Hai Số">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.449758" level="INFO">${tổng} = 8</msg>
-<var>${tổng}</var>
-<arg>${số_1} + ${số_2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.449758" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${tổng}</value>
-<status status="PASS" start="2024-10-08T14:25:20.449758" elapsed="0.000000"/>
-</return>
-<msg time="2024-10-08T14:25:20.450758" level="INFO">${kết_quả} = 8</msg>
-<var>${kết_quả}</var>
-<arg>${SỐ_1}</arg>
-<arg>${SỐ_2}</arg>
-<doc>Từ khóa tùy chỉnh để cộng hai số</doc>
-<status status="PASS" start="2024-10-08T14:25:20.448757" elapsed="0.002001"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-08T14:25:20.450758" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${kết_quả}</arg>
-<arg>${KẾT_QUẢ_MONG_ĐỢI}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.450758" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn" type="TEARDOWN">
-<msg time="2024-10-08T14:25:20.451760" level="INFO">Kết thúc bài tập phép cộng</msg>
-<arg>Kết thúc bài tập phép cộng</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.451760" elapsed="0.000000"/>
-</kw>
-<doc>Bài tập: Tạo test case thực hiện phép cộng với setup và teardown</doc>
-<tag>exercise</tag>
-<status status="PASS" start="2024-10-08T14:25:20.447758" elapsed="0.004002"/>
-</test>
-<doc>Lesson 2: Keywords và cấu trúc Test Case
-Mục tiêu: Hiểu cách sử dụng các từ khóa (keywords) có sẵn và cấu trúc test case.</doc>
-<status status="PASS" start="2024-10-08T14:25:20.433754" elapsed="0.019005"/>
+<doc>Lesson 4: Web Testing với Selenium
+Mục tiêu: Kiểm thử web bằng cách sử dụng SeleniumLibrary.</doc>
+<status status="PASS" start="2024-10-17T22:40:33.275817" elapsed="4.605984"/>
 </suite>
-<status status="PASS" start="2024-10-08T14:25:20.431753" elapsed="0.023006"/>
+<status status="PASS" start="2024-10-17T22:40:33.273816" elapsed="4.609985"/>
 </suite>
-<status status="PASS" start="2024-10-08T14:25:20.411749" elapsed="0.044010"/>
+<status status="PASS" start="2024-10-17T22:40:33.271815" elapsed="4.612985"/>
+</suite>
+<status status="PASS" start="2024-10-17T22:40:33.253810" elapsed="4.631991"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">basic</stat>
-<stat pass="2" fail="0" skip="0">example</stat>
-<stat pass="1" fail="0" skip="0">exercise</stat>
-<stat pass="1" fail="0" skip="0">structure</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Robot Fw">Robot Fw</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Lesson1">Robot Fw.Lesson1</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Keywords And Testcases">Robot Fw.Lesson1.Keywords And Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Fw">Robot Fw</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Baocao">Robot Fw.Baocao</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Login">Robot Fw.Baocao.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Login Testing">Robot Fw.Baocao.Login.Login Testing</stat>
 </suite>
 </statistics>
 <errors>

@@ -28,6 +28,7 @@ Ví dụ Sử Dụng Biến Danh Sách
     Log    Danh sách các loại trái cây:
     FOR    ${fruit}    IN    @{FRUITS}
         Log    - ${fruit}
+        Run Keyword If    '${fruit}' == 'orange'    Log    Đã tìm thấy cam!
     END
     Log    Trái cây đầu tiên là: ${FRUITS}[0]
     Log    Trái cây cuối cùng là: ${FRUITS}[-1]
@@ -38,26 +39,3 @@ Ví dụ Sử Dụng Biến Từ Điển
     Log    Tên: ${USER_INFO}[name]
     Log    Tuổi: ${USER_INFO}[age]
     Log    Email: ${USER_INFO}[email]
-
-Sử Dụng Biến Trong Test Case
-    [Documentation]    Bài tập: Sử dụng biến để lưu trữ thông tin đăng nhập
-    ${current_url}=    Set Variable    ${URL}
-    ${login_status}=    Login To Website    ${USERNAME}    ${PASSWORD}    ${current_url}
-    Should Be Equal    ${login_status}    success
-
-Sử Dụng Danh Sách Trong Test Case
-    [Documentation]    Bài tập: Sử dụng danh sách để lặp qua các giá trị
-    @{colors}=    Create List    red    blue    green    yellow
-    FOR    ${color}    IN    @{colors}
-        Log    Màu hiện tại: ${color}
-        Run Keyword If    '${color}' == 'blue'    Log    Đã tìm thấy màu xanh!
-    END
-
-*** Keywords ***
-Login To Website
-    [Arguments]    ${username}    ${password}    ${url}
-    [Documentation]    Mô phỏng đăng nhập vào website
-    Log    Đang truy cập ${url}
-    Log    Đăng nhập với tài khoản ${username}
-    Log    Sử dụng mật khẩu ${password}
-    RETURN    success

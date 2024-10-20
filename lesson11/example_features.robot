@@ -11,10 +11,6 @@ ${USERNAME}       user@example.com
 ${PASSWORD}       password123
 
 *** Test Cases ***
-Example Test Case
-    [Documentation]    Ví dụ về một test case đơn giản
-    [Tags]    regression    smoke
-    Log    Đây là một test case đơn giản
 
 Web Test Example
     [Documentation]    Ví dụ về test web với Selenium
@@ -42,20 +38,12 @@ File Operation Example
     Should Be Equal    ${content}    ${read_content}
     Remove File    test.txt
 
-Variable and Keyword Example
-    [Documentation]    Ví dụ về biến và từ khóa
-    ${name}=    Set Variable    Robot Framework
-    ${greeting}=    Catenate    Xin chào    ${name}
-    Should Be Equal    ${greeting}    Xin chào Robot Framework
-    ${uppercase}=    Convert To Upper Case    ${greeting}
-    Should Be Equal    ${uppercase}    XIN CHÀO ROBOT FRAMEWORK
-
 *** Keywords ***
 Custom Keyword Example
     [Arguments]    ${arg1}    ${arg2}
     [Documentation]    Ví dụ về từ khóa tùy chỉnh
     ${result}=    Evaluate    ${arg1} + ${arg2}
-    [Return]    ${result}
+    RETURN    ${result}
 
 Setup Example
     [Documentation]    Ví dụ về thiết lập

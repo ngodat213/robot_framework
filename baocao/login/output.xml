@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-17T22:41:03.167972" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Testing" source="D:\workspace\robot_fw\baocao\login\login_testing.robot">
+<test id="s1-t1" name="Login success" line="35">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:03.351003" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:03.351003" elapsed="1.718695"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:05.070698" elapsed="0.025006"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:05.096704" level="INFO">Typing text 'ngodat.it213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:05.096704" elapsed="0.082926"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:05.180630" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:05.216639" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:05.180630" elapsed="0.086021"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:05.266651" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:05.266651" elapsed="0.430485"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:41:05.095704" elapsed="0.601432"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:05.698136" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Logged in successfully</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:05.698136" elapsed="0.505413"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:06.203549" elapsed="2.164721"/>
+</kw>
+<doc>Login success</doc>
+<status status="PASS" start="2024-10-17T22:41:03.350004" elapsed="5.018266"/>
+</test>
+<test id="s1-t2" name="Login failed" line="43">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:08.369283" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:08.369283" elapsed="1.536761"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:09.906044" elapsed="0.032007"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:09.939052" level="INFO">Typing text 'ngodat.it213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:09.939052" elapsed="0.098767"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:10.038819" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:10.074826" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:10.037819" elapsed="0.088018"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:10.125837" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:10.125837" elapsed="0.424345"/>
+</kw>
+<arg>${USERNAME_FAILED}</arg>
+<arg>${PASSWORD_FAILED}</arg>
+<status status="PASS" start="2024-10-17T22:41:09.939052" elapsed="0.611130"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:10.551183" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Error: {"message":"email or password is not matched","error":"Unauthorized","statusCode":401}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:10.550182" elapsed="0.506629"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:11.056811" elapsed="2.117980"/>
+</kw>
+<doc>Login failed</doc>
+<status status="PASS" start="2024-10-17T22:41:08.369283" elapsed="4.806338"/>
+</test>
+<test id="s1-t3" name="Invalid email" line="51">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:13.176090" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:13.176090" elapsed="1.638534"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:14.814624" elapsed="0.030007"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:14.845631" level="INFO">Typing text 'ngodat.it213gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:14.845631" elapsed="0.098102"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:14.944733" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:14.974740" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:14.943733" elapsed="0.090021"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:15.034754" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:15.033754" elapsed="0.427561"/>
+</kw>
+<arg>${USERNAME_INVALID_EMAIL}</arg>
+<arg>${PASSWORD_INVALID_EMAIL}</arg>
+<status status="PASS" start="2024-10-17T22:41:14.844631" elapsed="0.616684"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:15.462316" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong dung dinh dang</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:15.461315" elapsed="0.006001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:15.467316" elapsed="2.118285"/>
+</kw>
+<doc>Invalid email</doc>
+<status status="PASS" start="2024-10-17T22:41:13.176090" elapsed="4.409511"/>
+</test>
+<test id="s1-t4" name="Invalid password" line="59">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:17.586604" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:17.586604" elapsed="1.569966"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.157570" elapsed="0.024005"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:19.182576" level="INFO">Typing text 'ngodat.it213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.182576" elapsed="0.109538"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:19.293115" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:19.327122" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.293115" elapsed="0.074016"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:19.367131" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.367131" elapsed="0.429749"/>
+</kw>
+<arg>${USERNAME_INVALID_PASSWORD}</arg>
+<arg>${PASSWORD_INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:41:19.181575" elapsed="0.615305"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:19.796880" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Password &gt; 8 ki tu</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.796880" elapsed="0.005002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:19.801882" elapsed="2.136939"/>
+</kw>
+<doc>Invalid password</doc>
+<status status="PASS" start="2024-10-17T22:41:17.586604" elapsed="4.352217"/>
+</test>
+<test id="s1-t5" name="Invalid email and password" line="67">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:21.939821" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:21.939821" elapsed="1.631304"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:23.572125" elapsed="0.020004"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:23.593130" level="INFO">Typing text 'ngodat.it21gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:23.593130" elapsed="0.099855"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:23.692985" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:23.723993" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:23.692985" elapsed="0.072017"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:23.765002" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:23.765002" elapsed="0.425908"/>
+</kw>
+<arg>${USERNAME_INVALID_EMAIL_AND_PASSWORD}</arg>
+<arg>${PASSWORD_INVALID_EMAIL_AND_PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:41:23.592129" elapsed="0.598781"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:24.190910" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong dung dinh dang</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:24.190910" elapsed="0.004000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:24.195911" elapsed="2.137307"/>
+</kw>
+<doc>Invalid email and password</doc>
+<status status="PASS" start="2024-10-17T22:41:21.939821" elapsed="4.393397"/>
+</test>
+<test id="s1-t6" name="Empty email" line="75">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:26.335221" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:26.335221" elapsed="1.570550"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:27.906772" elapsed="0.040008"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:27.947780" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:27.946780" elapsed="0.069406"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:28.017187" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:28.055195" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:28.016186" elapsed="0.094022"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:28.110208" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:28.110208" elapsed="0.428792"/>
+</kw>
+<arg>${USERNAME_EMPTY_EMAIL}</arg>
+<arg>${PASSWORD_EMPTY_EMAIL}</arg>
+<status status="PASS" start="2024-10-17T22:41:27.946780" elapsed="0.592220"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:28.539000" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:28.539000" elapsed="0.004002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:28.544003" elapsed="2.132518"/>
+</kw>
+<doc>Empty email</doc>
+<status status="PASS" start="2024-10-17T22:41:26.334225" elapsed="4.342296"/>
+</test>
+<test id="s1-t7" name="Empty password" line="83">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:30.678510" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:30.677511" elapsed="1.745502"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:32.424013" elapsed="0.022005"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:32.447019" level="INFO">Typing text 'ngodat.it213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:32.447019" elapsed="0.086019"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:32.534038" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:32.562045" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:32.534038" elapsed="0.065015"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:32.600053" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:32.599053" elapsed="0.432377"/>
+</kw>
+<arg>${USERNAME_EMPTY_PASSWORD}</arg>
+<arg>${PASSWORD_EMPTY_PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:41:32.447019" elapsed="0.585412"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:33.032431" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Password khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:33.032431" elapsed="0.004002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:33.037432" elapsed="2.126301"/>
+</kw>
+<doc>Empty password</doc>
+<status status="PASS" start="2024-10-17T22:41:30.677511" elapsed="4.486222"/>
+</test>
+<test id="s1-t8" name="Empty email and password" line="91">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:35.165736" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/log-in.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T22:41:35.165736" elapsed="1.612518"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T22:41:36.778254" elapsed="0.028005"/>
+</kw>
+<kw name="Đăng Nhập">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:36.807260" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:36.807260" elapsed="0.074017"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:36.882276" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-17T22:41:36.906287" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:36.882276" elapsed="0.079022"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:36.962299" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T22:41:36.962299" elapsed="0.445807"/>
+</kw>
+<arg>${USERNAME_EMPTY_EMAIL_AND_PASSWORD}</arg>
+<arg>${PASSWORD_EMPTY_EMAIL_AND_PASSWORD}</arg>
+<status status="PASS" start="2024-10-17T22:41:36.807260" elapsed="0.600846"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-17T22:41:37.408106" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-17T22:41:37.408106" elapsed="0.003999"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T22:41:37.413108" elapsed="2.134334"/>
+</kw>
+<doc>Empty email and password</doc>
+<status status="PASS" start="2024-10-17T22:41:35.164740" elapsed="4.382702"/>
+</test>
+<doc>Lesson 4: Web Testing với Selenium
+Mục tiêu: Kiểm thử web bằng cách sử dụng SeleniumLibrary.</doc>
+<status status="PASS" start="2024-10-17T22:41:03.168972" elapsed="36.379462"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Login Testing">Login Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

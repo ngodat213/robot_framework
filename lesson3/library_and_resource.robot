@@ -18,13 +18,6 @@ Ví dụ Sử Dụng OperatingSystem Library
     Remove File    ${TEST_FILE}
     File Should Not Exist    ${TEST_FILE}
 
-Ví dụ Sử Dụng BuiltIn Library
-    [Documentation]    Minh họa cách sử dụng BuiltIn Library
-    ${result}=    Evaluate    2 + 2
-    Should Be Equal As Integers    ${result}    4
-    ${uppercase}=    Convert To Upper Case    hello world
-    Should Be Equal    ${uppercase}    HELLO WORLD
-
 Bài Tập: Sử Dụng OperatingSystem Library
     [Documentation]    Bài tập: Tạo, ghi và xóa một tệp
     ${file_name}=    Set Variable    my_test_file.txt

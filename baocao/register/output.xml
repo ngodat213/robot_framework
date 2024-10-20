@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-19T21:59:22.624442" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Testing" source="D:\workspace\robot_fw\baocao\register\login_testing.robot">
+<test id="s1-t1" name="Đăng ký thành công" line="33">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:22.879383" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:22.879383" elapsed="2.042983"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:24.923365" elapsed="0.035009"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:24.959374" level="INFO">Typing text 'ngodat213' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:24.959374" elapsed="0.146128"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:25.106493" level="INFO">Typing text 'ngodat.itt213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:25.105502" elapsed="0.121885"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:25.227387" level="INFO">Typing text 'Code26102003' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:25.227387" elapsed="0.093021"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:25.320408" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:25.320408" elapsed="0.262748"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-10-19T21:59:24.958374" elapsed="0.624782"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:25.584155" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-10-19T21:59:26.192357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-19T21:59:26.192357" level="FAIL">Alert message should have been 'Sign Up Success' but it was 'Error: {"message":"request failed","error":{"response":{"message":"Email was exitsed","error":"Bad Request","statusCode":400},"status":400,"options":{},"message":"Email was exitsed","name":"BadRequestException"}}'.</msg>
+<arg>Sign Up Success</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="FAIL" start="2024-10-19T21:59:25.584155" elapsed="0.623205">Alert message should have been 'Sign Up Success' but it was 'Error: {"message":"request failed","error":{"response":{"message":"Email was exitsed","error":"Bad Request","statusCode":400},"status":400,"options":{},"message":"Email was exitsed","name":"BadRequestException"}}'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:26.207360" elapsed="2.236565"/>
+</kw>
+<doc>Kiểm thử đăng ký thành công</doc>
+<status status="FAIL" start="2024-10-19T21:59:22.878382" elapsed="5.565543">Alert message should have been 'Sign Up Success' but it was 'Error: {"message":"request failed","error":{"response":{"message":"Email was exitsed","error":"Bad Request","statusCode":400},"status":400,"options":{},"message":"Email was exitsed","name":"BadRequestException"}}'.</status>
+</test>
+<test id="s1-t2" name="Đăng ký thất bại - email không hợp lệ" line="41">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:28.445926" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:28.445926" elapsed="1.789353"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.236279" elapsed="0.039008"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:30.276288" level="INFO">Typing text 'ngodat213' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.276288" elapsed="0.098020"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:30.374308" level="INFO">Typing text 'ngodat.it213gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.374308" elapsed="0.115559"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:30.489867" level="INFO">Typing text 'Code26102003' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.489867" elapsed="0.144391"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:30.634258" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.634258" elapsed="0.212832"/>
+</kw>
+<arg>${USERNAME_INVALID_EMAIL}</arg>
+<arg>${EMAIL_INVALID_EMAIL}</arg>
+<arg>${PASSWORD_INVALID_EMAIL}</arg>
+<status status="PASS" start="2024-10-19T21:59:30.275287" elapsed="0.571803"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:30.848090" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong dung dinh dang</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.848090" elapsed="0.004000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:30.853091" elapsed="2.130438"/>
+</kw>
+<doc>Kiểm thử đăng ký với email không hợp lệ</doc>
+<status status="PASS" start="2024-10-19T21:59:28.444926" elapsed="4.538603"/>
+</test>
+<test id="s1-t3" name="Đăng ký thất bại - password không hợp lệ" line="49">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:32.984529" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:32.984529" elapsed="1.641095"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:34.626625" elapsed="0.036008"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:34.663633" level="INFO">Typing text 'ngodat213' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:34.663633" elapsed="0.104551"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:34.768184" level="INFO">Typing text 'ngodat.it213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:34.768184" elapsed="0.108620"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:34.876804" level="INFO">Typing text '1111' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:34.876804" elapsed="0.083413"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:34.960217" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:34.960217" elapsed="0.301291"/>
+</kw>
+<arg>${USERNAME_INVALID_PASSWORD}</arg>
+<arg>${EMAIL_INVALID_PASSWORD}</arg>
+<arg>${PASSWORD_INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-10-19T21:59:34.663633" elapsed="0.597875"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:35.262508" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Password &gt; 8 ki tu</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-19T21:59:35.262508" elapsed="0.004001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:35.266509" elapsed="2.139591"/>
+</kw>
+<doc>Kiểm thử đăng ký với password không hợp lệ</doc>
+<status status="PASS" start="2024-10-19T21:59:32.984529" elapsed="4.421571"/>
+</test>
+<test id="s1-t4" name="Đăng ký thất bại - tất cả trường đều rỗng" line="57">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:37.408100" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:37.408100" elapsed="1.671665"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.079765" elapsed="0.028537"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:39.109302" level="INFO">Typing text '' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.109302" elapsed="0.114106"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:39.223408" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.223408" elapsed="0.110056"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:39.334464" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.334464" elapsed="0.073191"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:39.408655" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.408655" elapsed="0.327166"/>
+</kw>
+<arg>${USERNAME_EMPTY}</arg>
+<arg>${EMAIL_EMPTY}</arg>
+<arg>${PASSWORD_EMPTY}</arg>
+<status status="PASS" start="2024-10-19T21:59:39.108302" elapsed="0.627519"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:39.736821" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-10-19T21:59:39.892158" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-19T21:59:39.892158" level="FAIL">Alert message should have been 'Email khong duoc rong' but it was 'FullName khong duoc rong'.</msg>
+<arg>Email khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="FAIL" start="2024-10-19T21:59:39.736821" elapsed="0.155337">Alert message should have been 'Email khong duoc rong' but it was 'FullName khong duoc rong'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:39.893158" elapsed="2.150230"/>
+</kw>
+<doc>Kiểm thử đăng ký với tất cả trường rỗng</doc>
+<status status="FAIL" start="2024-10-19T21:59:37.407100" elapsed="4.636288">Alert message should have been 'Email khong duoc rong' but it was 'FullName khong duoc rong'.</status>
+</test>
+<test id="s1-t5" name="Đăng ký thất bại - email rỗng" line="65">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:42.045388" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:42.044388" elapsed="3.300940"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.345328" elapsed="0.045010"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:45.391339" level="INFO">Typing text 'ngodat213' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.391339" elapsed="0.086020"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:45.478359" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.478359" elapsed="0.085643"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:45.564002" level="INFO">Typing text 'Code26102003' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.564002" elapsed="0.099553"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:45.664557" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.663555" elapsed="0.308843"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${EMAIL_EMPTY}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-10-19T21:59:45.391339" elapsed="0.581059"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:45.973400" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Email khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.972398" elapsed="0.006002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:45.978400" elapsed="2.184852"/>
+</kw>
+<doc>Kiểm thử đăng ký với trường email rỗng</doc>
+<status status="PASS" start="2024-10-19T21:59:42.044388" elapsed="6.118864"/>
+</test>
+<test id="s1-t6" name="Đăng ký thất bại - password rỗng" line="73">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:48.164252" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5502/sign-up.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T21:59:48.164252" elapsed="3.784245"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T21:59:51.948497" elapsed="0.028007"/>
+</kw>
+<kw name="Đăng Ký">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:51.977504" level="INFO">Typing text 'ngodat213' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:51.977504" elapsed="0.095979"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:52.073483" level="INFO">Typing text 'ngodat.itt213@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:52.073483" elapsed="0.119030"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:52.193514" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:52.192513" elapsed="0.076015"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:52.269529" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T21:59:52.269529" elapsed="0.306752"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD_EMPTY}</arg>
+<status status="PASS" start="2024-10-19T21:59:51.977504" elapsed="0.598777"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-19T21:59:52.576281" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Password khong duoc rong</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-19T21:59:52.576281" elapsed="0.006001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T21:59:52.582282" elapsed="2.128996"/>
+</kw>
+<doc>Kiểm thử đăng ký với trường password rỗng</doc>
+<status status="PASS" start="2024-10-19T21:59:48.164252" elapsed="6.547026"/>
+</test>
+<doc>Kiểm thử tính năng đăng ký người dùng.</doc>
+<status status="FAIL" start="2024-10-19T21:59:22.625442" elapsed="32.086837"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="2" skip="0" id="s1" name="Login Testing">Login Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

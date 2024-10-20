@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.0 on win32)" generated="2024-10-08T23:49:11.067500" rpa="false" schemaversion="5">
+<suite id="s1" name="Example Features" source="D:\workspace\robot_fw\example_features.robot">
+<kw name="Setup Example" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T23:49:11.335070" level="INFO">Đang thực hiện thiết lập</msg>
+<arg>Đang thực hiện thiết lập</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:49:11.335070" elapsed="0.000000"/>
+</kw>
+<doc>Ví dụ về thiết lập</doc>
+<status status="PASS" start="2024-10-08T23:49:11.334094" elapsed="0.000976"/>
+</kw>
+<test id="s1-t1" name="Web Test Example" line="15">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-10-08T23:49:11.336070" level="INFO">Bắt đầu test case</msg>
+<arg>Bắt đầu test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:49:11.336070" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:49:11.336070" level="INFO">Opening browser 'Chrome' to base url 'D:///workspace/robot_fw/login.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-08T23:49:11.336070" elapsed="96.264885"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:47.601954" level="INFO">Typing text 'user@example.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:47.600955" elapsed="0.106925"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:47.708997" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-08T23:50:47.749517" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:47.707880" elapsed="0.112895"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:47.820775" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:47.820775" elapsed="0.099105"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:48.008813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-08T23:50:48.008813" level="FAIL">UnexpectedAlertPresentException: Alert Text: Đăng nhập thành công!
+Message: unexpected alert open: {Alert text : Đăng nhập thành công!}
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FE87B645+29573]
+	(No symbol) [0x00007FF6FE7F0470]
+	(No symbol) [0x00007FF6FE6AB6EA]
+	(No symbol) [0x00007FF6FE749280]
+	(No symbol) [0x00007FF6FE7270A3]
+	(No symbol) [0x00007FF6FE6F12DF]
+	(No symbol) [0x00007FF6FE6F2441]
+	GetHandleVerifier [0x00007FF6FEBAC58D+3375821]
+	GetHandleVerifier [0x00007FF6FEBF7987+3684039]
+	GetHandleVerifier [0x00007FF6FEBECDAB+3640043]
+	GetHandleVerifier [0x00007FF6FE93B7C6+816390]
+	(No symbol) [0x00007FF6FE7FB77F]
+	(No symbol) [0x00007FF6FE7F75A4]
+	(No symbol) [0x00007FF6FE7F7740]
+	(No symbol) [0x00007FF6FE7E659F]
+	BaseThreadInitThunk [0x00007FFB5CE77374+20]
+	RtlUserThreadStart [0x00007FFB5EE7CC91+33]
+</msg>
+<arg>Chào mừng</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-10-08T23:50:47.920874" elapsed="0.197963">UnexpectedAlertPresentException: Alert Text: Đăng nhập thành công!
+Message: unexpected alert open: {Alert text : Đăng nhập thành công!}
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FE87B645+29573]
+	(No symbol) [0x00007FF6FE7F0470]
+	(No symbol) [0x00007FF6FE6AB6EA]
+	(No symbol) [0x00007FF6FE749280]
+	(No symbol) [0x00007FF6FE7270A3]
+	(No symbol) [0x00007FF6FE6F12DF]
+	(No symbol) [0x00007FF6FE6F2441]
+	GetHandleVerifier [0x00007FF6FEBAC58D+3375821]
+	GetHandleVerifier [0x00007FF6FEBF7987+3684039]
+	GetHandleVerifier [0x00007FF6FEBECDAB+3640043]
+	GetHandleVerifier [0x00007FF6FE93B7C6+816390]
+	(No symbol) [0x00007FF6FE7FB77F]
+	(No symbol) [0x00007FF6FE7F75A4]
+	(No symbol) [0x00007FF6FE7F7740]
+	(No symbol) [0x00007FF6FE7E659F]
+	BaseThreadInitThunk [0x00007FFB5CE77374+20]
+	RtlUserThreadStart [0x00007FFB5EE7CC91+33]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-08T23:50:48.118837" elapsed="2.181206"/>
+</kw>
+<doc>Ví dụ về test web với Selenium</doc>
+<status status="FAIL" start="2024-10-08T23:49:11.335070" elapsed="98.964973">UnexpectedAlertPresentException: Alert Text: Đăng nhập thành công!
+Message: unexpected alert open: {Alert text : Đăng nhập thành công!}
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FE87B645+29573]
+	(No symbol) [0x00007FF6FE7F0470]
+	(No symbol) [0x00007FF6FE6AB6EA]
+	(No symbol) [0x00007FF6FE749280]
+	(No symbol) [0x00007FF6FE7270A3]
+	(No symbol) [0x00007FF6FE6F12DF]
+	(No symbol) [0x00007FF6FE6F2441]
+	GetHandleVerifier [0x00007FF6FEBAC58D+3375821]
+	GetHandleVerifier [0x00007FF6FEBF7987+3684039]
+	GetHandleVerifier [0x00007FF6FEBECDAB+3640043]
+	GetHandleVerifier [0x00007FF6FE93B7C6+816390]
+	(No symbol) [0x00007FF6FE7FB77F]
+	(No symbol) [0x00007FF6FE7F75A4]
+	(No symbol) [0x00007FF6FE7F7740]
+	(No symbol) [0x00007FF6FE7E659F]
+	BaseThreadInitThunk [0x00007FFB5CE77374+20]
+	RtlUserThreadStart [0x00007FFB5EE7CC91+33]
+</status>
+</test>
+<test id="s1-t2" name="Invalid Login Test" line="24">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-10-08T23:50:50.303018" level="INFO">Bắt đầu test case</msg>
+<arg>Bắt đầu test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:50:50.303018" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:50.303018" level="INFO">Opening browser 'Chrome' to base url 'D:///workspace/robot_fw/login.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-08T23:50:50.303018" elapsed="1.378295"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:51.682313" level="INFO">Typing text 'invalid@example.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>invalid@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:51.681313" elapsed="0.123707"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:51.805020" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-10-08T23:50:51.836984" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>wrongpassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:51.805020" elapsed="0.081833"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:51.886853" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-08T23:50:51.886853" elapsed="0.083198"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-08T23:50:51.970051" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Đăng nhập thất bại. Vui lòng thử lại.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-08T23:50:51.970051" elapsed="0.008002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-08T23:50:51.978053" elapsed="2.134229"/>
+</kw>
+<doc>Kiểm tra đăng nhập không hợp lệ</doc>
+<status status="PASS" start="2024-10-08T23:50:50.302020" elapsed="3.810262"/>
+</test>
+<test id="s1-t3" name="File Operation Example" line="33">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-10-08T23:50:54.113282" level="INFO">Bắt đầu test case</msg>
+<arg>Bắt đầu test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.113282" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-08T23:50:54.114283" level="INFO">${content} = Đây là nội dung file test</msg>
+<var>${content}</var>
+<arg>Đây là nội dung file test</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.114283" elapsed="0.000000"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-08T23:50:54.115283" level="INFO" html="true">Created file '&lt;a href="file://D:\workspace\robot_fw\test.txt"&gt;D:\workspace\robot_fw\test.txt&lt;/a&gt;'.</msg>
+<arg>test.txt</arg>
+<arg>${content}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.114283" elapsed="0.001000"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-10-08T23:50:54.115955" level="INFO" html="true">Getting file '&lt;a href="file://D:\workspace\robot_fw\test.txt"&gt;D:\workspace\robot_fw\test.txt&lt;/a&gt;'.</msg>
+<msg time="2024-10-08T23:50:54.120959" level="INFO">${read_content} = Đây là nội dung file test</msg>
+<var>${read_content}</var>
+<arg>test.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.115955" elapsed="0.005004"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${content}</arg>
+<arg>${read_content}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.120959" elapsed="0.000000"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-08T23:50:54.121955" level="INFO" html="true">Removed file '&lt;a href="file://D:\workspace\robot_fw\test.txt"&gt;D:\workspace\robot_fw\test.txt&lt;/a&gt;'.</msg>
+<arg>test.txt</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.120959" elapsed="0.000996"/>
+</kw>
+<kw name="Log" owner="BuiltIn" type="TEARDOWN">
+<msg time="2024-10-08T23:50:54.121955" level="INFO">Kết thúc test case</msg>
+<arg>Kết thúc test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.121955" elapsed="0.000000"/>
+</kw>
+<doc>Ví dụ về thao tác với file</doc>
+<status status="PASS" start="2024-10-08T23:50:54.113282" elapsed="0.008673"/>
+</test>
+<kw name="Teardown Example" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-08T23:50:54.123956" level="INFO">Đang thực hiện dọn dẹp</msg>
+<arg>Đang thực hiện dọn dẹp</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-08T23:50:54.123956" elapsed="0.000000"/>
+</kw>
+<doc>Ví dụ về dọn dẹp</doc>
+<status status="PASS" start="2024-10-08T23:50:54.122955" elapsed="0.001001"/>
+</kw>
+<doc>Ví dụ về các tính năng của Robot Framework</doc>
+<status status="FAIL" start="2024-10-08T23:49:11.068516" elapsed="103.055440"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Example Features">Example Features</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
